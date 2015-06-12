@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories version="1.0">
+  <repo quality="testing" status="official">
+    <name>telred</name>
+    <description lang="en">TEL.RED software overlay></description>
+    <homepage>http://tel.red/</homepage>
+    <owner>
+      <email>ask_at_tel_dot_red</email>
+      <name>TEL.RED LLC</name>
+    </owner>
+    <source type="git">git://github.com/telred/telred-overlay.git</source>
+    <source type="git">https://github.com/telred/telred-overlay.git</source>
+  </repo>
+</repositories>

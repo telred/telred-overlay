@@ -1,8 +1,7 @@
 <?xml version="1.0" ?>
 <layman>
-  <overlay type="git" src="git://github.com/telred/telred-overlay.git" contact="ask_at_tel_dot_red" name="TEL.RED LLC">
+  <overlay type="git" src="git://github.com/telred/telred-overlay.git" contact="ask_at_tel_dot_red" name="telred">
     <link>http://tel.red/</link>
     <description>TEL.RED software overlay</description>
   </overlay>
 </layman>
-

@@ -53,7 +53,7 @@ src_prepare() {
     for lib in libsipw ${icu_libs}; do
         chrpath -d "${S}"/opt/sky_linux/lib/${lib}.so*
     done
-	chrpath -d "${S}/opt/sky_linux/platforminputcontexts/libfcitxplatforminputcontextplugin.so"
+    chrpath -d "${S}/opt/sky_linux/platforminputcontexts/libfcitxplatforminputcontextplugin.so"
 
     sed -i -e "s:Games;::g" "${S}"/usr/share/applications/sky.desktop
 }

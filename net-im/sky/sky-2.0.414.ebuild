@@ -11,11 +11,12 @@ HOMEPAGE="http://tel.red"
 
 SRC_URI="
     amd64? ( http://tel.red/linux/sky_ubuntu64_v${PV}.deb )
+	x86? ( http://tel.red/linux/sky_ubuntu32_v${PV}.deb )
 "
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="strip mirror"

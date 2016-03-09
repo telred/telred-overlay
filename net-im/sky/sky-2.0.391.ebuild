@@ -29,6 +29,7 @@ RDEPEND="
     ibus? ( app-i18n/ibus )
     media-libs/alsa-lib
     media-libs/gstreamer
+    media-libs/libv4l
     media-sound/pulseaudio[X]
     x11-libs/libX11
     x11-libs/libXext

@@ -45,6 +45,8 @@ src_prepare() {
 	chrpath -d "${S}/opt/sky_linux/platforminputcontexts/libfcitxplatforminputcontextplugin.so" || die
 
 	sed -i -e "s:Games;::g" "${S}"/usr/share/applications/sky.desktop || die
+
+	default
 }
 
 src_install() {

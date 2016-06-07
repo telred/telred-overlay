@@ -35,7 +35,7 @@ src_unpack() {
 
 src_prepare() {
 	# fix broken/excessive rpaths
-    find "${S}/opt/sky_linux" -type f -name '*.so*' -exec chrpath -d {} \;
+	find "${S}/opt/sky_linux" -type f -name '*.so*' -exec chrpath -d {} \;
 	chrpath -d "${S}/opt/sky_linux/sky" || die
 
 	sed -i -e "s:Games;::g" "${S}"/usr/share/applications/sky.desktop || die

@@ -6,11 +6,10 @@ EAPI=5
 
 inherit eutils gnome2-utils
 
-DESCRIPTION="Lync & Skype for Business on Linux"
+DESCRIPTION="Lync & Skype for Business client on Linux"
 HOMEPAGE="https://tel.red"
-_skypkg_rel=2
 
-SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV}-${_skypkg_rel}deb8+jessie_amd64.deb"
+SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV%.*}-${PV##*.}debian+jessie_amd64.deb"
 
 LICENSE="eula_tel.red"
 SLOT="0"
@@ -65,6 +64,9 @@ src_install() {
 		doins -r "${S}/${dd}/"*
 	done
 
-	newicon "${S}"/usr/share/pixmaps/sky/sky.png ${PN}.png
+	newicon "${S}"/usr/share/pixmaps/sky.png ${PN}.png
+	newicon "${S}"/usr/share/pixmaps/sky.svg ${PN}.svg
 	domenu "${S}"/usr/share/applications/sky.desktop
 }
+
+# vim: set ts=2 sw=2 ft=sh noet:

@@ -46,13 +46,13 @@ src_prepare() {
 
 src_install() {
 	local _sky_basedir="usr/lib/${PN}"
-	local _sky_libdir="${_sky_basedir}/lib"
+	local _sky_libdir="${_sky_basedir}/lib64"
 	local _sky_bindir="${_sky_basedir}"
 	local _sky_datadir=( "${_sky_basedir}/sounds" )
 
 	exeinto "${_sky_bindir}"
-	doexe "${S}/usr/lib/sky/"{sky,sky.sh,man.sh}
-	dosym "${D}${_sky_bindir}/sky.sh" /usr/bin/sky
+	doexe "${S}/usr/lib/sky/"{sky,man.sh}
+	dosym "${D}${_sky_bindir}/sky" /usr/bin/sky
 
 	insinto "${_sky_libdir}"
 	insopts -m0755

@@ -32,11 +32,11 @@ RDEPEND="
 	x11-libs/gtk+:2[-aqua]
 	x11-libs/libXinerama
 	x11-libs/libxkbcommon[X]
-	dev-qt/qtcore:5/5.6
-	dev-qt/qtdbus:5/5.6
-	dev-qt/qtgui:5/5.6[dbus,png,xcb]
-	dev-qt/qtnetwork:5/5.6
-	dev-qt/qtwidgets:5/5.6[png,xcb]
+	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtgui:5[dbus,png,xcb]
+	dev-qt/qtnetwork:5
+	dev-qt/qtwidgets:5[png,xcb]
 "
 
 src_unpack() {

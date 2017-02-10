@@ -9,7 +9,7 @@ inherit eutils gnome2-utils
 DESCRIPTION="Lync & Skype for Business client on Linux"
 HOMEPAGE="https://tel.red"
 
-SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV%.*}-${PV##*.}debian+jessie_amd64.deb"
+SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV%.*}-${PV##*.}debian+jessie_amd6${PV##*.}.deb"
 
 LICENSE="eula_tel.red"
 SLOT="0"

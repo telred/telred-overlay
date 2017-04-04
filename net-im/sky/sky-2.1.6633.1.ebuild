@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -9,7 +8,7 @@ inherit eutils gnome2-utils
 DESCRIPTION="Lync & Skype for Business client on Linux"
 HOMEPAGE="https://tel.red"
 
-SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV%.*}-${PV##*.}debian+jessie_amd6${PV##*.}.deb"
+SRC_URI="https://tel.red/repos/debian/pool/non-free/sky_${PV%.*}-${PV##*.}debian+jessie_amd64.deb"
 
 LICENSE="eula_tel.red"
 SLOT="0"
@@ -37,6 +36,7 @@ RDEPEND="
 	dev-qt/qtgui:5/5.6[dbus,png,xcb]
 	dev-qt/qtnetwork:5/5.6
 	dev-qt/qtwidgets:5/5.6[png,xcb]
+	!net-im/sky-ng
 "
 
 src_unpack() {
@@ -74,4 +74,11 @@ src_install() {
 	domenu "${S}"/usr/share/applications/sky.desktop
 }
 
-# vim: set ts=2 sw=2 ft=sh noet:
+pkg_postinst() {
+	echo
+	einfo "net-im/sky-ng package was introduced since Sky release v2.1.6633, which provides native Gentoo binaries"
+	einfo "Sky-NG ebuild will supersede current Debian port over time, after achieving enough reliability"
+	echo
+}
+
+# vim: set ts=4 sw=4 ft=sh noet:

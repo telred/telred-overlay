@@ -23,17 +23,21 @@ RDEPEND="
 	dev-db/sqlite:3
 	dev-libs/openssl:0
 	>=dev-qt/qtcore-5.6:5
-	>=dev-qt/qtgui-5.6:5[gtkstyle,jpeg,xcb,png,gif]
+	>=dev-qt/qtgui-5.6:5[dbus,gif,jpeg,png,xcb]
 	>=dev-qt/qtnetwork-5.6:5
-	>=dev-qt/qtwidgets-5.6:5[gtkstyle]
+	dev-qt/qtwebchannel[qml]
+	>=dev-qt/qtwebengine-5.6:5[widgets]
+	>=dev-qt/qtwidgets-5.6:5
 	media-libs/alsa-lib
 	media-libs/libv4l
+	media-libs/libvpx[svc]
 	media-libs/mesa
 	media-sound/pulseaudio[alsa,alsa-plugin]
 	media-video/ffmpeg:0/55.57.57[X]
+	!net-im/sky
 	net-misc/curl
 	sys-apps/util-linux
-	sys-libs/zlib
+	sys-libs/zlib[minizip]
 	virtual/jpeg:62
 	x11-libs/libX11
 	x11-libs/libXcursor
@@ -48,7 +52,6 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-libs/libXv
-	!net-im/sky
 "
 
 src_unpack() {

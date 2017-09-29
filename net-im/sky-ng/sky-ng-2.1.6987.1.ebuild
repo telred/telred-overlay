@@ -8,7 +8,9 @@ inherit eutils gnome2-utils
 DESCRIPTION="Lync & Skype for Business client on Linux"
 HOMEPAGE="https://tel.red"
 
-SRC_URI="https://tel.red/linux/sky-gentoo-${PV}.tar.xz"
+SRC_URI="
+	amd64? ( https://tel.red/repos/gentoo/sky-gentoo-${PV%.*}-${PV##*.}-x86_64.tar.xz )
+"
 
 LICENSE="eula_tel.red"
 SLOT="0"
@@ -22,15 +24,12 @@ DEPEND=""
 RDEPEND="
 	dev-db/sqlite:3
 	dev-libs/openssl:0
-	>=dev-qt/qtcore-5.6:5[dbus,png,xcb]
-	>=dev-qt/qtgui-5.6:5[gtkstyle,jpeg,xcb,png,gif]
+	>=dev-qt/qtcore-5.6:5
+	>=dev-qt/qtgui-5.6:5[dbus,gif,jpeg,png,xcb]
 	>=dev-qt/qtnetwork-5.6:5
-	dev-qt/qtwebchannel[qml]
-	>=dev-qt/qtwebengine-5.6:5[widgets]
-	>=dev-qt/qtwidgets-5.6:5[gtkstyle]
+	>=dev-qt/qtwidgets-5.6:5
 	media-libs/alsa-lib
 	media-libs/libv4l
-	media-libs/libvpx[svc]
 	media-libs/mesa
 	media-sound/pulseaudio[alsa,alsa-plugin]
 	media-video/ffmpeg:0/55.57.57[X]

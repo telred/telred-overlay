@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -22,22 +22,19 @@ RESTRICT="mirror strip"
 DEPEND=""
 
 RDEPEND="
+	!net-im/sky
 	dev-db/sqlite:3
 	dev-libs/openssl:0
 	>=dev-qt/qtcore-5.6:5
 	>=dev-qt/qtgui-5.6:5[dbus,gif,jpeg,png,xcb]
 	>=dev-qt/qtnetwork-5.6:5
 	>=dev-qt/qtwidgets-5.6:5
-	media-libs/alsa-lib
 	media-libs/libv4l
-	media-libs/mesa
-	media-sound/pulseaudio[alsa,alsa-plugin]
-	media-video/ffmpeg:0/55.57.57[X]
-	!net-im/sky
+	media-sound/pulseaudio
+	media-video/ffmpeg:0/56.58.58[X]
 	net-misc/curl
 	sys-apps/util-linux
-	sys-libs/zlib[minizip]
-	virtual/jpeg:62
+	>=sys-libs/glibc-2.28:2.2
 	x11-libs/libX11
 	x11-libs/libXcursor
 	x11-libs/libXdamage
@@ -49,6 +46,7 @@ RDEPEND="
 	x11-libs/libXmu
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-libs/libXv
 "

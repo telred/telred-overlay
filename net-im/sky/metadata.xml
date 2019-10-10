@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type='person'>
+		<email>linux@tel.red</email>
+		<description>TEL.RED Sky</description>
+	</maintainer>
+	<longdescription>Lync &amp; Skype for business on Linux. Native Gentoo build</longdescription>
+	<use>
+		<flag name="legacy-openssl">Use legacy OpenSSL library dev-libs/openssl:0/0 </flag>
+	</use>
+</pkgmetadata>

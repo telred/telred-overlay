@@ -10,7 +10,7 @@ HOMEPAGE="https://tel.red"
 
 SRC_URI="
 	amd64? (
-		!legacy-openssl? ( https://tel.red/repos/gentoo/sky-gentoo-${PV%.*}-${PV##*.}-x86_64.tar.xz )
+		!legacy-openssl? ( https://tel.red/repos/gentoo/sky-${PV%.*}-${PV##*.}-x86_64.tar.xz )
 		legacy-openssl? ( https://tel.red/repos/gentoo/sky-gentoo-ossl10-${PV%.*}-${PV##*.}-x86_64.tar.xz )
 	)
 "

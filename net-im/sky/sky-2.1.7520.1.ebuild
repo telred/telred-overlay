@@ -29,7 +29,7 @@ RDEPEND="
 	!net-im/sky-ng
 	dev-db/sqlite:3
 	>=dev-qt/qtcore-5.6:5
-	>=dev-qt/qtgui-5.6:5[dbus,gif,jpeg,png,xcb]
+	|| ( >=dev-qt/qtgui-5.6:5[dbus,gif,jpeg,png,xcb] >=dev-qt/qtgui-5.14:5[dbus,gif,jpeg,png] )
 	>=dev-qt/qtnetwork-5.6:5
 	>=dev-qt/qtwidgets-5.6:5
 	!legacy-openssl? ( dev-libs/openssl:0/1.1 )

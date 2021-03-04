@@ -18,7 +18,7 @@ KEYWORDS="-* ~amd64"
 
 QA_PREBUILT="usr/lib/${PN/-*/}/.*"
 RESTRICT="mirror strip"
-IUSE="legacy-openssl"
+IUSE=""
 
 DEPEND=""
 
@@ -29,8 +29,6 @@ RDEPEND="
 	>=dev-qt/qtgui-5.15.0[dbus,gif,jpeg,png,X]
 	>=dev-qt/qtnetwork-5.15.0
 	>=dev-qt/qtwidgets-5.15.0
-	!legacy-openssl? ( dev-libs/openssl:0/1.1 )
-	legacy-openssl? ( dev-libs/openssl:0/0 )
 	media-libs/libv4l
 	media-sound/pulseaudio
 	media-video/ffmpeg:0/56.58.58[X]
